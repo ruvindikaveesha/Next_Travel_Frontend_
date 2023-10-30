@@ -67,15 +67,15 @@ body, html {
 }
 
 .logout-button button {
-    background-color: #3498db;
+    background-color: #002ae8;
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 15px;
     padding: 10px 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .logout-button button:hover {
-    background-color: #2980b9;
+    background-color: #161db4;
 }
