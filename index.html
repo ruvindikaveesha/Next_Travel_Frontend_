@@ -217,6 +217,37 @@
     </div>
 </section>
 
+<!--Package Detail Modal-->
+<div class="modal fade" id="reservationModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+     aria-labelledby="reservationModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="reservationModalLabel">Reservation Form</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h1 class="text-center" id="packageNameOnModal">Travel Package Title</h1>
+                <p class="text-center" id="packageDescOnModal">A brief description of the package.</p>
+                <div class="card">
+                    <label class="d-none" id="packageIdModal"></label>
+                    <div class="card-body">
+                        <h3>Package Details</h3>
+                        <h6>Category : <span id="packageCategoryOnModal"></span></h6>
+                        <h6>Star rate : <span id="packageStarRateOnModal"></span></h6>
+                        <h6>Head count : <span id="packageHeadCountOnModal"></span></h6>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-bs-dismiss="modal" data-bs-target="#reservationModal2" data-bs-toggle="modal"
+                        id="continueOnModal" style="background: #FB6011; border-color: #FB6011; color: white"
+                        type="button">Book Now
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
