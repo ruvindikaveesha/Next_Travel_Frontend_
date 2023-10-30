@@ -26,6 +26,9 @@ body, html {
     font-size: 16px;
     display: block;
     margin-bottom: 10px;
+    font-family: 'Salsa', cursive;
+    text-shadow: -3px 2px 4px #000000;
+
 }
 
 .main-content {

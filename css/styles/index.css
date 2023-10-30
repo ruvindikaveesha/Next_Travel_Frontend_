@@ -22,7 +22,7 @@ body {
 }
 
 nav {
-    background-color:  #0b182f;
+    background-color: #272748;
     color: #fff;
     padding: 10px 0;
     display: flex;
@@ -39,10 +39,10 @@ nav {
 }
 
 
-nav .logo img {
-    max-width: 100px;
-    padding: 0 20px;
-}
+/*nav .logo img {*/
+/*    max-width: 100px;*/
+/*    padding: 0 20px;*/
+/*}*/
 
 nav ul {
     list-style: none;
@@ -69,7 +69,7 @@ header {
     padding: 20px;
     height: 100vh;
     display: flex;
-    background-image: url("../../assets/headerBackground.jpg");
+    background-image: url("../../assets/background img.jpg");
     align-items: center;
     justify-content: space-around;
     background-size: 100%;
@@ -79,18 +79,11 @@ header {
     width: 50%;
 }
 h1 {
-    font-family:'Salsa', cursive;
     font-size:7em;
-    text-shadow: -3px 2px 4px #bdb2b2;
 
 }
 
-p{
-    color: #be3726;
-    text-shadow: -3px 2px 4px #c7c2c2;
 
-
-}
 
 
 .travel-locations, .packages, .contact {
