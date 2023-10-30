@@ -69,6 +69,52 @@
     </div>
 </header>
 
+<section class="packages container" id="packages">
+    <h2 class="sectionTitle" style="font-family: 'Josefin Sans', sans-serif; font-size: 85px; font-style: italic">Travel
+        Packages</h2>
+    <h1 class="h1 mb-3 pt-5" style="font-family: 'Josefin Sans', sans-serif;">Super Luxury</h1>
+    <hr>
+    <div class="row row-cols-1 row-cols-md-3 g-4" id="SuperLuxuryContainer"></div>
+    <h1 class="h1 mb-3 pt-5" style="font-family: 'Josefin Sans', sans-serif;">Luxury</h1>
+    <hr>
+    <div class="row row-cols-1 row-cols-md-3 g-4" id="LuxuryContainer"></div>
+    <h1 class="h1 mb-3 pt-5" style="font-family: 'Josefin Sans', sans-serif;">Mid-level</h1>
+    <hr>
+    <div class="row row-cols-1 row-cols-md-3 g-4" id="MidLevelContainer"></div>
+    <h1 class="h1 mb-3 pt-5" style="font-family: 'Josefin Sans', sans-serif;">Regular</h1>
+    <hr>
+    <div class="row row-cols-1 row-cols-md-3 g-4" id="RegularContainer"></div>
+</section>
+<div class="modal fade" id="exampleModal8" tabindex="-1" aria-labelledby="exampleModalLabel9"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-l  p-1 rounded">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="reservatioModalLabel">User Detalis</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="userliginForm">
+                    <h1 class="text-center" id="Uname">User Details</h1>
+                    <p class="text-center" id="loginUserName">A brief description of the package.</p>
+
+                    <label class="d-none" id="packageI"></label>
+                    <div class="text-center">
+                        <div class="card-body">
+                            <!--                                        <h3>Package Details</h3>-->
+                            <h6>Full Name : <input placeholder="Name" id="loginName"></h6>
+                            <h6>Email : <input placeholder="email" id="loginUserEmail"></h6>
+                            <h6>Address :<input placeholder="Address" id="loginAddrres"></h6>
+                            <h6>Nic : <input placeholder="nic" id="loginNic"></h6>
+                        </div>
+                    </div>
+                    <button class="btn btn-danger" id="updateUser" type="button">Update</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 
 </body>
