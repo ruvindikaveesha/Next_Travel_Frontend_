@@ -8,7 +8,7 @@ body, html {
 .sidebar {
     width: 200px;
     height: 100vh;
-    background-color: #333;
+    background-color: #6071b4;
     position: fixed;
     top: 0;
     left: 0;
@@ -19,7 +19,7 @@ body, html {
 .nav-button {
     background: none;
     border: none;
-    color: #fff;
+    color: #ffffff;
     padding: 10px 20px;
     cursor: pointer;
     outline: none;
@@ -39,7 +39,7 @@ body, html {
 
 /* Add styles for the top navbar */
 .top-navbar {
-    background-color: #333;
+    background-color: #0b182f;
     width: 100vw;
     display: flex;
     justify-content: space-between;

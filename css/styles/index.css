@@ -22,7 +22,7 @@ body {
 }
 
 nav {
-    background-color: #333;
+    background-color:  #0b182f;
     color: #fff;
     padding: 10px 0;
     display: flex;
@@ -32,6 +32,12 @@ nav {
     width: 100%;
     top: 0;
 }
+
+.logo img {
+    max-width: 100px; /* Adjust the max-width as needed */
+    height: auto;
+}
+
 
 nav .logo img {
     max-width: 100px;
