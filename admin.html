@@ -294,6 +294,114 @@
         </div>
     </div>
 
+    <div id="user" class="section hide">
+        <div class="mb-5 mt-5" id="userPage">
+            <div class="container-fluid">
+                <div class="mt-md-4 mb-md-4">
+                    <h1>User</h1>
+                    <div class="row ">
+                        <div class="col-4">
+                            <form id="userForm">
+                                <div class="row mt-4">
+                                    <div class="col">
+                                        <label for="Full_name">Full Name</label>
+                                        <input class="form-control" id="Full_name" name="name"
+                                               placeholder="Pasan Kumara"
+                                               type="text">
+                                    </div>
+                                    <div class="col">
+                                        <label for="selctedRole">Role</label>
+                                        <select class="form-control" id="selctedRole" name="category">
+                                            <option>User</option>
+                                            <option>Super Admin</option>
+                                            <option>Travel Admin</option>
+                                            <option>User Admin</option>
+                                            <option>Vehicle Admin</option>
+                                            <option>Guide Admin</option>
+                                            <option>Driver Admin</option>
+                                            <option>Hotel Admin</option>
+                                        </select>
+
+                                    </div>
+                                </div>
+                                <div class="row mt-4">
+                                    <div class="col">
+                                        <label for="email">Email</label>
+                                        <input class="form-control" name="contactNum" id="email" placeholder="Email"
+                                               type="text">
+                                    </div>
+                                    <div class="col">
+                                        <label for="address">Address</label>
+                                        <input class="form-control" id="address" name="address" placeholder="Address"
+                                               type="text">
+                                    </div>
+                                </div>
+                                <div class="row mt-4">
+                                    <div class="col">
+                                        <label for="userName">User Name</label>
+                                        <input class="form-control" name="contactNum" id="userName"
+                                               placeholder="User Name"
+                                               type="text">
+                                    </div>
+                                    <div class="col">
+                                        <label for="password">Password</label>
+                                        <input class="form-control" id="password" name="address" placeholder="Password"
+                                               type="text">
+                                    </div>
+                                </div>
+                                <div class="mt-4">
+                                    <label for="nic">Nic</label>
+                                    <input class="form-control" id="nic" name="email" placeholder="Nic"
+                                           type="text">
+                                    <div class="col">
+                                        <label for="usr_frontPhoto">Attach Photo</label>
+                                        <input class="form-control" id="usr_frontPhoto"
+                                               type="file">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row mt-4 mb-5">
+                                    <div class="col-8 btn-group">
+                                        <button class="btn btn-success" id="btnAddUser" type="button">Add</button>
+                                        <button class="btn btn-warning" id="btmUpdateUser" type="button">Update</button>
+                                        <button class="btn btn-danger" id="btnDeleteUser" type="button">Delete</button>
+                                        <button class="btn btn-primary" id="btnClearUser" type="button">Clear
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                 aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-l  p-1 rounded">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="reservationModalLabel">User Details</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <h1 class="text-center" id="popUpUseruserName">Travel Package Title</h1>
+                                            <p class="text-center" id="popUpUserEmail">A brief description of the
+                                                package.</p>
+                                            <label class="d-none" id="packageIdModal"></label>
+                                            <div class="text-center">
+                                                <div class="card-body">
+                                                    <!--                                        <h3>Package Details</h3>-->
+                                                    <h6>Full Name : <span id="popUpuserName"></span></h6>
+                                                    <h6>Nic : <span id="popUpUserNic"></span></h6>
+                                                    <h6>Address : <span id="popUpUserAddress"></span></h6>
+                                                    <h6>Password : <span id="popUpuserRole"></span></h6>
+                                                    <h6>Role : <span id="popUpUserPassword"></span></h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
 
 
 
