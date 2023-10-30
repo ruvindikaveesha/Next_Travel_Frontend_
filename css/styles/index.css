@@ -72,10 +72,20 @@ header {
 #homeDesc {
     width: 50%;
 }
-
 h1 {
-    font-size: 2em;
+    font-family:'Salsa', cursive;
+    font-size:7em;
+    text-shadow: -3px 2px 4px #bdb2b2;
+
 }
+
+p{
+    color: #be3726;
+    text-shadow: -3px 2px 4px #c7c2c2;
+
+
+}
+
 
 .travel-locations, .packages, .contact {
     padding: 20px;
