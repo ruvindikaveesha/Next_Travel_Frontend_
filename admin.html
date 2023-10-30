@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="css/styles/admin.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    </head>
+</head>
 <body>
 <div class="top-navbar">
     <div class="logo">
@@ -16,7 +16,6 @@
         <button id="logoutButton">Logout</button>
     </div>
 </div>
-
 <div class="sidebar">
     <button id="driverBtn" class="nav-button" onclick="showSectionOnClick('driver')">Driver</button>
     <button id="travel-packageBtn" class="nav-button" onclick="showSectionOnClick('travel-package')">Travel Package
@@ -29,6 +28,7 @@
 </div>
 
 <div class="main-content">
+
     <div id="driver" class="section hide">
         <div class="mb-5 mt-5">
             <div class="container-fluid">
@@ -41,22 +41,28 @@
                                     <div class="col">
                                         <label for="driver_name">Name</label>
                                         <input class="form-control" id="driver_name" name="name"
-                                               placeholder="Sanath Nishantha"
+                                               placeholder="Pasan Kumara"
                                                type="text">
                                     </div>
                                     <div class="col">
                                         <label for="driver_lic">Nic Number</label>
                                         <input class="form-control" name="nic" id="driver_lic" placeholder="B12345678"
-                                        type="text">
+                                               type="text">
                                     </div>
-
+                                </div>
+                                <div class="row mt-4">
+                                    <div class="col">
+                                        <label for="driver_contact">Contact Number</label>
+                                        <input class="form-control" name="contactNum" id="driver_contact"
+                                               placeholder="0712345678"
+                                               type="text">
+                                    </div>
                                     <div class="col">
                                         <label for="driver_address">Address</label>
                                         <input class="form-control" id="driver_address" name="address"
-                                               placeholder="Kalutara"
+                                               placeholder="Colombo 07"
                                                type="text">
                                     </div>
-
                                 </div>
                                 <div class="mt-4">
                                     <label for="driver_email">Email</label>
@@ -64,7 +70,6 @@
                                            placeholder="contac@gamil.com"
                                            type="text">
                                 </div>
-
                                 <div class="mt-4">
                                     <label for="dr_frontPhoto">Licence Front Photo</label>
                                     <input class="form-control" id="dr_frontPhoto"
@@ -84,7 +89,8 @@
                             </form>
                         </div>
 
-<!--        Driver table-->
+
+                        <!--  Driver table-->
                         <div class="col-8 table-responsive" style="height: 61vh; overflow-y: scroll;">
                             <table class="table shadow table-hover" id="tblDriver">
                                 <thead class="thead-dark">
@@ -108,6 +114,83 @@
                         </span>
                     </div>
                 </div>
+                <!--                <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"-->
+                <!--                     aria-hidden="true">-->
+                <!--                    <div class="modal-dialog modal-xl  p-1 rounded">-->
+                <!--                        <div class="modal-content">-->
+                <!--                            <div class="modal-header rounded">-->
+                <!--                                <h5 class="modal-title px-4">Driver Details</h5>-->
+                <!--                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
+                <!--                            </div>-->
+                <!--                            <div class="modal-body was-validation">-->
+                <!--                                <form>-->
+
+                <!--                                    <div class="row">-->
+                <!--                                        <div class="col-4">-->
+                <!--                                            <div class="form-floating mb-3">-->
+                <!--                                                <input type="text" class="form-control" id="popUpDriverName" style="width: 300px;">-->
+                <!--                                                <label for="popUpDriverName">Driver Name</label>-->
+                <!--                                            </div>-->
+                <!--                                        </div>-->
+                <!--                                        <div class="col-4">-->
+                <!--                                            <div class="form-floating mb-3">-->
+                <!--                                                <input type="text" class="form-control" id="popUpDriverNic" style="width: 300px;">-->
+                <!--                                                <label for="popUpDriverNic">Nic</label>-->
+                <!--                                            </div>-->
+                <!--                                        </div>-->
+                <!--                                        <div class="col-4">-->
+                <!--                                            <div class="form-floating mb-3">-->
+                <!--                                                <input type="text" class="form-control" id="popUpDriverContact" style="width: 300px;">-->
+                <!--                                                <label for="popUpDriverContact">Contact</label>-->
+                <!--                                            </div>-->
+                <!--                                        </div>-->
+                <!--                                    </div>-->
+
+                <!--                                    <div class="row">-->
+                <!--                                        <div class="col-4">-->
+                <!--                                            <div class="form-floating mb-3">-->
+                <!--                                                <input type="text" class="form-control" id="popUpDriverEmail" style="width: 300px;">-->
+                <!--                                                <label for="popUpDriverEmail">Email</label>-->
+                <!--                                            </div>-->
+                <!--                                        </div>-->
+                <!--                                        <div class="col-4">-->
+                <!--                                            <div class="form-floating mb-3">-->
+                <!--                                                <input type="text" class="form-control" id="popUpDriverAddress" style="width: 300px;">-->
+                <!--                                                <label for="popUpDriverAddress">Address</label>-->
+                <!--                                            </div>-->
+                <!--                                        </div>-->
+                <!--                                        <div class="col-4">-->
+
+                <!--                                        </div>-->
+
+
+                <!--                                        <div class="col-4">-->
+
+                <!--                                        </div>-->
+
+                <!--                                        <div class="col-4">-->
+
+                <!--                                        </div>-->
+
+                <!--                                        <div class="col-4">-->
+                <!--                                            &lt;!&ndash;                                <input class="form-control" type="file" id="formFile2" style="width: 300px;" >&ndash;&gt;-->
+                <!--                                        </div>-->
+
+                <!--                                        <div class="col-4 pt-3">-->
+
+                <!--                                        </div>-->
+
+                <!--                                    </div>-->
+
+                <!--                                    <div class="modal-footer">-->
+                <!--                                    </div>-->
+
+                <!--                                </form>-->
+                <!--                            </div>-->
+                <!--                        </div>-->
+                <!--                    </div>-->
+                <!--                </div>-->
+
 
                 <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
                      aria-hidden="true">
@@ -118,14 +201,12 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                         aria-label="Close"></button>
                             </div>
-
                             <div class="modal-body">
                                 <h1 class="text-center" id="popUpDriverName">Travel Package Title</h1>
                                 <p class="text-center" id="popUpDriverEmail">A brief description of the package.</p>
                                 <div class="text-center">
                                     <div class="card-body">
-
-<!--                                     Package Details -->
+                                        <!--                                        <h3>Package Details</h3>-->
                                         <h6>Nic : <span id="popUpDriverNic"></span></h6>
                                         <h6>Contact Number : <span id="popUpDriverContact"></span></h6>
                                         <h6>Address : <span id="popUpDriverAddress"></span></h6>
@@ -138,6 +219,323 @@
 
             </div>
 
+        </div>
+    </div>
+
+    <div id="travel-package" class="section hide">
+        <div class="mb-5 mt-5">
+            <div class="container-fluid">
+                <div class="mt-md-4 mb-md-4">
+                    <h1>Travel Packages</h1>
+                    <div class="row ">
+                        <div class="col-4">
+                            <form id="travelForm">
+                                <div class="row mt-4">
+                                    <div class="col">
+                                        <label for="tr_name">Package Name</label>
+                                        <input class="form-control" id="tr_name" name="name" placeholder="Pasan Kumara"
+                                               type="text">
+                                    </div>
+                                    <div class="col">
+                                        <label for="travel_category">Category</label>
+                                        <select class="form-control" id="travel_category" name="category">
+                                            <option>Regular</option>
+                                            <option>Mid-level</option>
+                                            <option>Luxury</option>
+                                            <option>Super Luxury</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row mt-4">
+                                    <div class="col">
+                                        <label for="star_rate">Star Rate</label>
+                                        <input class="form-control" name="contactNum" id="star_rate" placeholder="Rate"
+                                               type="number">
+                                    </div>
+                                    <div class="col">
+                                        <label for="travel_count">Head Count</label>
+                                        <input class="form-control" id="travel_count" name="address"
+                                               placeholder="Head Count"
+                                               type="number">
+                                    </div>
+                                </div>
+                                <div class="mt-4">
+                                    <label for="travel_description">Description</label>
+                                    <input class="form-control" id="travel_description" name="email"
+                                           placeholder="Type the Description"
+                                           type="text">
+                                </div>
+                                <div class="mt-4">
+                                    <label for="tr_frontPhoto">Attach Photo</label>
+                                    <input class="form-control" id="tr_frontPhoto"
+                                           type="file">
+                                </div>
+                                <div class="form-group row mt-4 mb-5">
+                                    <div class="col-8 btn-group">
+                                        <button class="btn btn-success" id="btnAddTravel" type="button">Add</button>
+                                        <button class="btn btn-warning" id="btnUpdateTravel" type="button">Update
+                                        </button>
+                                        <button class="btn btn-danger" id="btnDeleteTravel" type="button">Delete
+                                        </button>
+                                        <button class="btn btn-primary" id="btnClearTravel" type="button">Clear
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                            <!--                            <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"-->
+                            <!--                                 aria-hidden="true">-->
+                            <!--                                <div class="modal-dialog modal-xl  p-1 rounded">-->
+                            <!--                                    <div class="modal-content">-->
+                            <!--                                        <div class="modal-header rounded">-->
+                            <!--                                            <h5 class="modal-title px-4">Packages Details</h5>-->
+                            <!--                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
+                            <!--                                        </div>-->
+                            <!--                                        <div class="modal-body was-validation">-->
+                            <!--                                            <form>-->
+
+                            <!--                                                <div class="row">-->
+                            <!--                                                    <div class="col-4">-->
+                            <!--                                                        <div class="form-floating mb-3">-->
+                            <!--                                                            <input type="text" class="form-control" id="popUpPackageName" style="width: 300px;">-->
+                            <!--                                                            <label for="popUpPackageName">Package Name</label>-->
+                            <!--                                                        </div>-->
+                            <!--                                                    </div>-->
+                            <!--                                                    <div class="col-4">-->
+                            <!--                                                        <div class="form-floating mb-3">-->
+                            <!--                                                            <input type="text" class="form-control" id="popUpTravelCategory" style="width: 300px;">-->
+                            <!--                                                            <label for="popUpTravelCategory">CateGory</label>-->
+                            <!--                                                        </div>-->
+                            <!--                                                    </div>-->
+                            <!--                                                    <div class="col-4">-->
+                            <!--                                                        <div class="form-floating mb-3">-->
+                            <!--                                                            <input type="text" class="form-control" id="popPacakageStarRate" style="width: 300px;">-->
+                            <!--                                                            <label for="popPacakageStarRate">Star Rate</label>-->
+                            <!--                                                        </div>-->
+                            <!--                                                    </div>-->
+                            <!--                                                </div>-->
+
+                            <!--                                                <div class="row">-->
+                            <!--                                                    <div class="col-4">-->
+                            <!--                                                        <div class="form-floating mb-3">-->
+                            <!--                                                            <input type="text" class="form-control" id="popTravelCount" style="width: 300px;">-->
+                            <!--                                                            <label for="popTravelCount">Travel Count</label>-->
+                            <!--                                                        </div>-->
+                            <!--                                                    </div>-->
+                            <!--                                                    <div class="col-4">-->
+                            <!--                                                        <div class="form-floating mb-3">-->
+                            <!--                                                            <input type="text" class="form-control" id="popTravelDuration" style="width: 300px;">-->
+                            <!--                                                            <label for="popTravelDuration">Duration(Days)</label>-->
+                            <!--                                                        </div>-->
+                            <!--                                                    </div>-->
+                            <!--                                                    <div class="col-4">-->
+
+                            <!--                                                    </div>-->
+
+
+                            <!--                                                    <div class="col-4">-->
+
+                            <!--                                                    </div>-->
+
+                            <!--                                                    <div class="col-4">-->
+
+                            <!--                                                    </div>-->
+
+                            <!--                                                    <div class="col-4">-->
+                            <!--                                                        &lt;!&ndash;                                <input class="form-control" type="file" id="formFile2" style="width: 300px;" >&ndash;&gt;-->
+                            <!--                                                    </div>-->
+
+                            <!--                                                    <div class="col-4 pt-3">-->
+
+                            <!--                                                    </div>-->
+
+                            <!--                                                </div>-->
+
+                            <!--                                                <div class="modal-footer">-->
+                            <!--                                                </div>-->
+
+                            <!--                                            </form>-->
+                            <!--                                        </div>-->
+                            <!--                                    </div>-->
+                            <!--                                </div>-->
+                            <!--                            </div>-->
+                            <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                 aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-l  p-1 rounded">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Travel Details</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <h1 class="text-center" id="popUpPackageName">Travel Package Title</h1>
+                                            <!--                                            <p class="text-center" id="driverEmailOnModal">A brief description of the package.</p>-->
+                                            <!--                                            <label class="d-none" id="packageIdModal"></label>-->
+                                            <div class="text-center">
+                                                <div class="card-body">
+                                                    <!--                                        <h3>Package Details</h3>-->
+                                                    <h6>Category : <span id="popUpTravelCategory"></span></h6>
+                                                    <h6>StarRate : <span id="popPacakageStarRate"></span></h6>
+                                                    <h6>Head Count : <span id="popTravelCount"></span></h6>
+                                                    <h6>Description : <span id="popTravelDuration"></span></h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!--  Driver table-->
+                        <div class="col-8 table-responsive" style="height: 61vh; overflow-y: scroll;">
+                            <table class="table shadow table-hover" id="tblPackage">
+                                <thead class="thead-dark">
+                                <tr class="table-primary">
+                                    <th scope="col">Id</th>
+                                    <th scope="col">Package Name</th>
+                                    <th scope="col">Category</th>
+                                    <th scope="col">Star Rate</th>
+                                    <th scope="col">Head Count</th>
+                                    <th scope="col">Description</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                                </thead>
+                                <tbody id=travelTable>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="hotel" class="section hide">
+        <div class="mb-5 mt-5">
+            <div class="container-fluid">
+                <div class="mt-md-4 mb-md-4">
+                    <h1>Hotel</h1>
+                    <div class="row">
+                        <div class="col-4">
+                            <form id="hotelForm">
+                                <div class="row mt-4">
+                                    <div class="col">
+                                        <label for="hotelName">Hotel Name</label>
+                                        <input class="form-control" id="hotelName" name="name"
+                                               placeholder="Hotel Name"
+                                               type="text">
+                                    </div>
+                                    <div class="col">
+                                        <label for="location">Location</label>
+                                        <input class="form-control" name="location" id="location"
+                                               placeholder="Location" type="text">
+                                    </div>
+                                </div>
+                                <div class="form-group row mt-4">
+                                    <div class="col">
+                                        <label for=categorySelected>Category</label>
+                                        <select class="form-control" id="categorySelected" name="category">
+                                            <option>Regular</option>
+                                            <option>Mid_Level</option>
+                                            <option>Luxury</option>
+                                            <option>Super Luxury</option>
+                                        </select>
+                                    </div>
+                                    <div class="col">
+                                        <label for="googleMapCoordinates">GoogleMapCoordinates</label>
+                                        <input class="form-control" id="googleMapCoordinates"
+                                               name="googleMapCoordinates" placeholder="Colombo 07"
+                                               type="text">
+                                    </div>
+                                </div>
+                                <div class="row mt-4">
+                                    <div class="col">
+                                        <label for="hotel_fee">Hotel Fee One Day</label>
+                                        <input class="form-control" id="hotel_fee" name="name"
+                                               placeholder="00"
+                                               type="text">
+                                    </div>
+
+                                    <div class="col">
+                                        <label for="hotelContact">Contact</label>
+                                        <input class="form-control" id="hotelContact" name="hotelContact"
+                                               placeholder="07XXXXXXXX"
+                                               type="text">
+                                    </div>
+                                </div>
+
+
+                                <div class="mt-4">
+                                    <label for="hotelEmail">Email</label>
+                                    <input class="form-control" id="hotelEmail" name="hotelEmail"
+                                           placeholder="example@email.com"
+                                           type="text">
+                                    <div class="col">
+                                        <label for="googleMapCoordinates">Star Rate</label>
+                                        <input class="form-control" id="starRate"
+                                               name="starRate" placeholder="starRate"
+                                               type="number">
+                                    </div>
+
+                                </div>
+                                <div class="form-group row mt-4 mb-5">
+                                    <div class="col-8 btn-group">
+                                        <button class="btn btn-success" id="btnAddHotel" type="button">Add</button>
+                                        <button class="btn btn-warning" id="btnUpdateHotel" type="button">Update
+                                        </button>
+                                        <button class="btn btn-danger" id="btnDeleteHotel" type="button">Delete</button>
+                                        <button class="btn btn-primary" id="btnClearHotel" type="button">Clear
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+
+
+                        <!--  Driver table-->
+                        <div class="col-8 table-responsive" style="height: 61vh; overflow-y: scroll;">
+                            <table class="table shadow table-hover" id="tblHotel">
+                                <thead class="thead-dark">
+                                <tr class="table-primary">
+                                    <th scope="col">Id</th>
+                                    <th scope="col">Hotel Name</th>
+                                    <th scope="col">Contact</th>
+                                    <th scope="col">Location</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                                </thead>
+                                <tbody id="hotelTable">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-l  p-1 rounded">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Hotel Details</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <h1 class="text-center" id="popHotelName">Travel Package Title</h1>
+                            <p class="text-center" id="popHotelEmail">A brief description of the package.</p>
+                            <div class="text-center">
+                                <div class="card-body">
+                                    <!--                                        <h3>Package Details</h3>-->
+                                    <h6>Loacation : <span id="popHotelLoaction"></span></h6>
+                                    <h6>Hotel Fee : <span id="popHotelFee"></span></h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -225,6 +623,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group row mt-4">
+
                                 </div>
                                 <div class="form-group row mt-4 mb-5">
                                     <div class="col-9 btn-group">
@@ -238,8 +637,8 @@
                             </form>
                         </div>
 
-<!--                        car table-->
 
+                        <!--  car table-->
                         <div class="col-8 table-responsive" style="height: 60vh; overflow-y: scroll;">
                             <table class="table shadow table-hover">
                                 <thead class="thead-dark">
@@ -401,6 +800,7 @@
                             </div>
                         </div>
 
+
                         <!--  Driver table-->
                         <div class="col-8 table-responsive" style="height: 61vh; overflow-y: scroll;">
                             <table class="table shadow table-hover" id="tblUser">
@@ -519,6 +919,7 @@
                             </div>
                         </div>
 
+
                         <!--  Driver table-->
                         <div class="col-8 table-responsive" style="height: 61vh; overflow-y: scroll;">
                             <table class="table shadow table-hover" id="tblGuide">
@@ -547,23 +948,9 @@
 </div>
 
 
-
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery-3.7.1.min.js"></script>
 <script src="js/scripts/admin.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </body>
 </html>
