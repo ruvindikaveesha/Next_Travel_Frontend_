@@ -427,6 +427,99 @@
         </div>
     </div>
 
+    <div id="guide" class="section hide">
+        <div class="mb-5 mt-5" id="guidePage">
+            <div class="container-fluid">
+                <div class="mt-md-4 mb-md-4">
+                    <h1>Guide</h1>
+                    <div class="row ">
+                        <div class="col-4">
+                            <form id="guideForm">
+                                <div class="row mt-4">
+                                    <div class="col">
+                                        <label for="Full_name">Full Name</label>
+                                        <input class="form-control" id="guide_name" name="name"
+                                               placeholder="Pasan Kumara"
+                                               type="text">
+                                    </div>
+                                    <div class="col">
+                                        <label for="selctedgender">Gender</label>
+                                        <select class="form-control" id="selctedgender" name="category">
+                                            <option>Male</option>
+                                            <option>Female</option>
+                                        </select>
+
+                                    </div>
+                                </div>
+                                <div class="row mt-4">
+                                    <div class="col">
+                                        <label for="email">Age</label>
+                                        <input class="form-control" name="contactNum" id="age" placeholder="Age"
+                                               type="text">
+                                    </div>
+                                    <div class="col">
+                                        <label for="address">Address</label>
+                                        <input class="form-control" id="guide_address" name="address"
+                                               placeholder="Address"
+                                               type="text">
+                                    </div>
+                                </div>
+                                <div class="row mt-4">
+                                    <div class="col">
+                                        <label for="userName">Contact Number</label>
+                                        <input class="form-control" name="contactNum" id="contactNumber"
+                                               placeholder="076 ##"
+                                               type="text">
+                                    </div>
+                                    <div class="col">
+                                        <label for="manDayValue">Day Value</label>
+                                        <input class="form-control" id="manDayValue" name="address" placeholder="Value"
+                                               type="number">
+                                    </div>
+                                </div>
+                                <div class="form-group row mt-4 mb-5">
+                                    <div class="col-8 btn-group">
+                                        <button class="btn btn-success" id="btnAddGuide" type="button">Add</button>
+                                        <button class="btn btn-warning" id="btmUpdateGuide" type="button">Update
+                                        </button>
+                                        <button class="btn btn-danger" id="btnDeleteGuide" type="button">Delete</button>
+                                        <button class="btn btn-primary" id="btnClearGuide" type="button">Clear
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <div class="modal fade" id="exampleModal8" tabindex="-1"
+                                 aria-labelledby="exampleModalLabel8"
+                                 aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-l  p-1 rounded">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="reservatioModalLabel">Guide Detalis</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <h1 class="text-center" id="name">Travel Package Title</h1>
+                                            <p class="text-center" id="guideaddress">A brief description of the
+                                                package.</p>
+                                            <label class="d-none" id="packageI"></label>
+                                            <div class="text-center">
+                                                <div class="card-body">
+                                                    <!--                                        <h3>Package Details</h3>-->
+                                                    <h6>Full Name : <span id="pgender"></span></h6>
+                                                    <h6>Contact : <span id="contact"></span></h6>
+                                                    <h6>Day Value : <span id="dayValue"></span></h6>
+                                                    <h6>Age : <span id="guideAge"></span></h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
 
 
 
