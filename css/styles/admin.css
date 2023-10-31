@@ -16,6 +16,10 @@ body, html {
     z-index: 9 !important;
 }
 
+#travel-package,#driver,#hotel,#vehicle,#user,#guide{
+    background-color: #a0c3e1;
+}
+
 .nav-button {
     background: none;
     border: none;

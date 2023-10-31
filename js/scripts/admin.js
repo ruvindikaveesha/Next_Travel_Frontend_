@@ -93,6 +93,7 @@ $("#btnAddDriver").on("click", function () {
         success: function (response) {
             alert("Driver added successfully:");
             document.getElementById('driverForm').reset();
+            loadAllDriver();
         },
         error: function (error) {
             console.error("Error adding driver:", error);
@@ -146,7 +147,7 @@ function bindRowClickEventsDriver() {
                 let driverContactNumber = resp.data.contactNum;
                 let driverAddress= resp.data.address;
                 document.getElementById('driverLicenceImg').src = baseURL + resp.data.drivingLicenseImg;
-               // $("#popUpDriverName").val(resp.data.name)
+                // $("#popUpDriverName").val(resp.data.name)
                 document.getElementById('popUpDriverName').innerHTML
                     = driverName;
 
@@ -162,8 +163,8 @@ function bindRowClickEventsDriver() {
                 document.getElementById('popUpDriverAddress').innerHTML
                     = driverAddress;
 
-              //  $("#popUpDriverNic").val(resp.data.nic);
-              //  $("#popUpDriverEmail").val(resp.data.email)
+                //  $("#popUpDriverNic").val(resp.data.nic);
+                //  $("#popUpDriverEmail").val(resp.data.email)
                 $("#popUpDriverContact").val(resp.data.contactNum)
                 $("#popUpDriverAddress").val(resp.data.address)
             }
@@ -174,14 +175,20 @@ function bindRowClickEventsDriver() {
 
 
 $("#btnUpdateDriver").click(function () {
-    let nic = $("#dr_lic").val();
-    let name = $("#dr_name").val();
-    let address = $("#dr_address").val();
-    let contactNum = $("#dr_contact").val();
-    let email = $("#dr_email").val();
+    let nic = $("#driver_lic").val();
+    let name = $("#driver_name").val();
+    let address = $("#driver_address").val();
+    let contactNum = $("#driver_contact").val();
+    let email = $("#driver_email").val();
 
     var driver = {
-        id: driverId, name: name, email: email, nic: nic, contactNum: contactNum, address: address,
+        id: driverId,
+        name: name,
+        email: email,
+        nic: nic,
+        contactNum:
+        contactNum,
+        address: address,
     }
 
     $.ajax({
@@ -263,7 +270,7 @@ function loadAllHotel() {
     $.ajax({
         url: baseURL + "hotel/view_all", dataType: "json", success: function (resp) {
             for (let dri of resp.data) {
-                var row = '<tr><td>' + dri.id + '</td><td>' + dri.name + '</td>><td>' + dri.hotelCategory + '</td><td>' + dri.email + '</td><td>' + dri.location + '</td><td><a data-bs-toggle="modal" data-bs-target="#exampleModal3"\n' +
+                var row = '<tr><td>' + dri.id + '</td><td>' + dri.name + '</td><td>' + dri.email + '</td><td>' + dri.location + '</td><td><a data-bs-toggle="modal" data-bs-target="#exampleModal3"\n' +
                     '                                                                                                                                                                                                                  class="text-primary font-monospace" style="cursor: pointer">View</a></td></tr>';
                 $("#hotelTable").append(row);
             }
@@ -342,7 +349,7 @@ $("#btnUpdateHotel").click(function () {
         hotelFee: hotelFee,
     }
     $.ajax({
-        type: "POST", // You might need to adjust this depending on your server's API.
+        type: "PUT", // You might need to adjust this depending on your server's API.
         url: baseURL + "hotel/update_hotel",
         data: JSON.stringify(hotel),
         contentType: "application/json",
@@ -481,11 +488,11 @@ function bindRawPackages() {
 }
 
 $("#btnUpdateTravel").click(function () {
-    let packageName = $("#dr_name").val();
-    let packageCategory = $("#category").val();
+    let packageName = $("#tr_name").val();
+    let packageCategory = $("#travel_category").val();
     let starRate = $("#star_rate").val();
-    let description = $("#description").val();
-    let headCount = $("#count").val();
+    let description = $("#travel_description").val();
+    let headCount = $("#travel_count").val();
     let travelDuration = $("#duration").val();
     let travel = {
         id: packageId,
@@ -497,7 +504,7 @@ $("#btnUpdateTravel").click(function () {
         travelDuration: travelDuration,
     }
     $.ajax({
-        type: "POST", // You might need to adjust this depending on your server's API.
+        type: "PUT", // You might need to adjust this depending on your server's API.
         url: baseURL + "packages/update_package",
         data: JSON.stringify(travel),
         contentType: "application/json",
@@ -561,6 +568,7 @@ $("#btnAddUser").click(function () {
             console.error("Error adding User:", error);
         }
     });
+
 
 })
 
@@ -655,7 +663,7 @@ $("#btmUpdateUser").click(function () {
         nicOrPassportNum: nicOrPassportNum
     }
     $.ajax({
-        type: "POST", // You might need to adjust this depending on your server's API.
+        type: "PUT", // You might need to adjust this depending on your server's API.
         url: baseURL + "user/update_user",
         data: JSON.stringify(user),
         contentType: "application/json",
@@ -746,8 +754,8 @@ function loadALLVehicle() {
     });
 }
 
-$("#btnUpdateCar").click(function (){
-    let vehicleName=$("#vName").val();
+$("#btnUpdateCar").click(function () {
+    let vehicleName = $("#vName").val();
     let regNumber = $("#registrationNo").val();
     let brand = $("#make").val();
     let category = $("#categoryVehi").val();
@@ -759,8 +767,8 @@ $("#btnUpdateCar").click(function (){
     let pricePerkm = $("#priceKm").val();
 
     let vehicle = {
-        id:vehicleId,
-        vehicleName:vehicleName,
+        id: vehicleId,
+        carName: vehicleName,
         regNumber: regNumber,
         brand: brand,
         category: category,
@@ -775,9 +783,9 @@ $("#btnUpdateCar").click(function (){
 
 
     $.ajax({
-        method: "POST", // You might need to adjust this depending on your server's API.
-        url: baseURL+"vehicle/update_vehicle",
-        data: JSON.stringify(vehicle),
+        method: "PUT", // You might need to adjust this depending on your server's API.
+        url: baseURL + "vehicle/update_vehicle",
+        data: vehicle,
         dataType: "application/json",
         success: function (response) {
             loadALLVehicle();
@@ -864,19 +872,19 @@ $("#btnAddGuide").click(function (){
         manDayPrice:manValue,
         status:GuideStatus,
     }
-       $.ajax({
-           method: "POST",
-           url:baseURL+"/guide/save_guide",
-           data: guide,
-           dataType: "application/json",
-           success: function (response) {
-               loadAllGuide();
-               document.getElementById('guideForm').reset();
-           },
-           error: function (error) {
-               console.error("Error adding Guide:", error);
-           }
-       });
+    $.ajax({
+        method: "POST",
+        url:baseURL+"/guide/save_guide",
+        data: guide,
+        dataType: "application/json",
+        success: function (response) {
+            loadAllGuide();
+            document.getElementById('guideForm').reset();
+        },
+        error: function (error) {
+            console.error("Error adding Guide:", error);
+        }
+    });
 
 })
 
@@ -889,7 +897,7 @@ function loadAllGuide(){
                     'class="text-primary font-monospace" style="cursor: pointer">View</a></td></tr>';
                 $("#guideTable").append(row);
             }
-          guideBindRaw();
+            guideBindRaw();
         }
 
     });
