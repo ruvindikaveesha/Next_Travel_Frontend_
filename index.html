@@ -10,7 +10,7 @@
 <body>
 <nav class="z-3">
     <div class="logo">
-        <img src="assets/logo 2 png.png" alt="Logo">
+        <img src="logo.png" alt="Logo">
     </div>
     <div class="menuItem">
         <ul>
@@ -18,6 +18,10 @@
             <li><a href="#packages">Packages</a></li>
             <li><a href="#travel-locations">Travel Locations</a></li>
             <li><a href="#contact">Contact</a></li>
+            <l1 class="user-section">
+                <a  data-bs-toggle="modal"
+                    data-bs-target="#exampleModal11" style="cursor: pointer" id="bokked_Details"> My Booking</a>
+            </l1>
             <l1 class="user-section">
                 <a class="user-name px-2 text-primary font-monospace" data-bs-toggle="modal"
                    data-bs-target="#exampleModal8" style="cursor: pointer" id="userNameLogged"></a>
@@ -30,15 +34,56 @@
     </div>
 
 </nav>
+<div class="modal fade"  id="exampleModal11" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+     aria-labelledby="reservationModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="reservationModalLabel11">Reservation Form</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h1 class="text-center" id="resetvation">Reservation</h1>
+                <!--                //<p class="text-center" id="reservationDescOnModal">A brief description of the package.</p>-->
+
+
+
+                <div class="card">
+                    <div class=" table-responsive" style="height: 61vh; overflow-y: scroll;">
+                        <table class="table shadow table-hover" id="tblDriver">
+                            <thead class="thead-dark">
+                            <tr class="table-primary">
+                                <th scope="col">Id</th>
+                                <th scope="col">hotel_Id</th>
+                                <th scope="col">V_RegNumber</th>
+                                <th scope="col">U_Id</th>
+                                <th scope="col">Total</th>
+                                <th scope="col">Reserved Date</th>
+                            </tr>
+                            </thead>
+                            <tbody id="resevaionTable">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-bs-dismiss="modal" data-bs-target="#reservationModal2" data-bs-toggle="modal"
+                        id="canselOnModal" style="background: #FB6011; border-color: #FB6011; color: white"
+                        type="button">Cancel
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <header id="home">
-        <section id="homeDesc">
-            <h1 style="font-family: 'Josefin Sans', sans-serif; color: #eaeaea;font-size: 50px; text-shadow: -3px 2px 4px #000000;">Welcome To Next Travel Pvt
-                Ltd</h1>
-            <p style="font-family: 'Josefin Sans', sans-serif; color: #eaeaea;font-size: 30px;text-shadow: -3px 2px 4px #fa0202" >Join With Us...!</p>
-            <p style="font-family: 'Josefin Sans', sans-serif; color: #eaeaea;font-size: 30px;text-shadow: -3px 2px 4px #0700ff"> Enjoy Your Free time With Your Family......!!</p>
-        </section>
-
+    <section id="homeDesc">
+        <h1 style="font-family: 'Josefin Sans', sans-serif; color: #eaeaea;font-size: 50px; text-shadow: -3px 2px 4px #000000;">Welcome To Next Travel Pvt
+            Ltd</h1>
+        <p style="font-family: 'Josefin Sans', sans-serif; color: #eaeaea;font-size: 30px;text-shadow: -3px 2px 4px #fa0202" >Join With Us...!</p>
+        <p style="font-family: 'Josefin Sans', sans-serif; color: #eaeaea;font-size: 30px;text-shadow: -3px 2px 4px #0700ff"> Enjoy Your Free time With Your Family......!!</p>
+    </section>
     <div class="">
         <form class="bg-white p-4 shadow align-self-center login-section"
               style="border-radius: 0.5rem; right: 17%;">
@@ -113,6 +158,8 @@
     </div>
 </div>
 
+
+
 <section  class="travel-locations container" id="travel-locations">
     <h2 class="sectionTitle" style="font-family: 'Josefin Sans', sans-serif; font-size: 85px; font-style: italic">
         Popular Tourist Attraction
@@ -170,12 +217,14 @@
                     <h5 class="card-title">Polonnaruwa</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                         the card's content.</p>
+
                 </div>
             </div>
         </div>
     </div>
 
 </section>
+
 <section class="contact container" id="contsact">
     <h2 class="sectionTitle" style="font-family: 'Josefin Sans', sans-serif; font-size: 85px; font-style: italic">
         Contact Us</h2>
@@ -245,6 +294,7 @@
         </div>
     </div>
 </div>
+
 <!--Package Detail Modal 2-->
 <div class="modal fade" id="reservationModal2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
      aria-labelledby="reservationModal2" aria-hidden="true">
@@ -324,14 +374,11 @@
         </div>
     </div>
 </div>
+
 <footer class="w-100"></footer>
 
 <script src="js/jquery-3.7.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/scripts/index.js"></script>
-
-
-
-
 </body>
 </html>
