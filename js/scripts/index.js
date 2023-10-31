@@ -369,10 +369,10 @@ function makeReservation(driverId, packId) {
 }
 $("#userNameLogged").click(function (){
 
-$("#loginName").val(loggedInUser.name);
-$("#loginUserEmail").val(loggedInUser.email);
-$("#loginAddrres").val(loggedInUser.address);
-$("#loginNic").val(loggedInUser.nicOrPassportNum);
+    $("#loginName").val(loggedInUser.name);
+    $("#loginUserEmail").val(loggedInUser.email);
+    $("#loginAddrres").val(loggedInUser.address);
+    $("#loginNic").val(loggedInUser.nicOrPassportNum);
 })
 $("#updateUser").click(function (){
     let name = $("#loginName").val();
@@ -409,6 +409,21 @@ $("#updateUser").click(function (){
         }
     });
 
+})
+$("#bokked_Details").click(function (){
+    $("#hotelTable").empty();
+    $.ajax({
+        url: baseURL + "reservation/getAll?id="+parseInt(loggedInUser.id)+"",
+        dataType: "json",
+        method:"GET",
+        success: function (resp) {
+            for (let dri of resp.data) {
+                var row = '<tr><td>' + dri.reservationId + '</td><td>' + dri.hotelId + '</td>><td>' + dri.vehicleRegNumber + '</td><td>' + dri.userId + '</td><td>' + dri.totalAmount + '</td><td>' + dri.reservedDate + '</td></tr>';
+                $("#resevaionTable").append(row);
+            }
+        }
+
+    });
 })
 
 
