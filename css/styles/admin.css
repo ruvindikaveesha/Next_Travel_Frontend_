@@ -3,6 +3,7 @@ body, html {
     padding: 0;
     height: 100%;
     overflow: hidden;
+    background-image: url("../../assets/background img.jpg");
 }
 
 .sidebar {
@@ -17,7 +18,8 @@ body, html {
 }
 
 #travel-package,#driver,#hotel,#vehicle,#user,#guide{
-    background-color: #a0c3e1;
+    /*background-color: #588fc4;*/
+
 }
 
 .nav-button {

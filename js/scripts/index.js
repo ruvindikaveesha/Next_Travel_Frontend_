@@ -6,7 +6,7 @@ $(document).ready(function () {
 
     $("#contact-form").submit(function (event) {
         event.preventDefault();
-        alert("Form submitted! We'll get in touch with you soon.");
+        alert("Form Submitted! We'll get in touch with you soon.");
     });
 
     getPackageDetails();
@@ -54,11 +54,11 @@ function getPackageDetails() {
 
                 });
             } else {
-                console.error("Invalid or empty response from the API.");
+                console.error("Oops!Invalid or empty response from the API.");
             }
         },
         error: function (xhr, status, error) {
-            console.error("Error fetching data: " + error);
+            console.error("Error fetching data..!" + error);
         }
     });
 };
@@ -211,7 +211,7 @@ $("#loginBtn").on("click", function () {
             }
         },
         error: function (xhr, status, error) {
-            console.error("Error fetching data: " + error);
+            console.error("Error fetching data..!" + error);
         }
     });
 });
@@ -279,7 +279,7 @@ $("#proceedBtn").on("click", function () {
                         makeReservation(dId, packId);
                     },
                     error: function (error) {
-                        alert("There is no available guide at this moment")
+                        alert("Oops!There is no available guide at this moment.")
                     }
                 });
             } else {
@@ -287,7 +287,7 @@ $("#proceedBtn").on("click", function () {
             }
         },
         error: function (error) {
-            alert("There is no available driver at this moment")
+            alert("Oops!There is no available driver at this moment.")
         }
     });
 
@@ -307,7 +307,7 @@ function getGuide() {
             netAmountCalculation();
         },
         error: function (error) {
-            alert("There is no available guide at this moment")
+            alert("Oops!There is no available guide at this moment.")
         }
     });
 };
@@ -360,7 +360,7 @@ function makeReservation(driverId, packId) {
         contentType: "application/json",
         success: function (response) {
             driverUnavailable(driverId);
-            alert("Reservation successful");
+            alert("Reservation Successfully..!");
         },
         error: function (error) {
             console.error("Error:", error);
@@ -398,18 +398,21 @@ $("#updateUser").click(function (){
         data: JSON.stringify(user),
         contentType: "application/json",
         success: function (response) {
-            alert("Travel User Updated successfully:");
+            alert("User Updated successfully..!");
             loggedInUser.name=response.data.name;
             loggedInUser.address=response.data.address;
             loggedInUser.email=response.data.email;
             loggedInUser.nicOrPassportNum=response.data.nicOrPassportNum;
         },
         error: function (error) {
-            console.error("Error adding User:", error);
+            console.error("Oops!Error update User..!", error);
         }
     });
 
 })
+
+// Booking Now
+
 $("#bokked_Details").click(function (){
     $("#hotelTable").empty();
     $.ajax({
@@ -425,5 +428,3 @@ $("#bokked_Details").click(function (){
 
     });
 })
-
-
