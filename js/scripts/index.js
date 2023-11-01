@@ -410,7 +410,6 @@ $("#updateUser").click(function (){
     });
 
 })
-
 $("#bokked_Details").click(function (){
     $("#hotelTable").empty();
     $.ajax({
@@ -426,6 +425,5 @@ $("#bokked_Details").click(function (){
 
     });
 })
-
 
 
