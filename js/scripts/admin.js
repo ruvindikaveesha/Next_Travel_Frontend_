@@ -91,12 +91,12 @@ $("#btnAddDriver").on("click", function () {
         processData: false,
         enctype: "multipart/form-data",
         success: function (response) {
-            alert("Driver added successfully..!");
+            alert("Driver added successfully:");
             document.getElementById('driverForm').reset();
             loadAllDriver();
         },
         error: function (error) {
-            console.error("Oops!Error added driver.!", error);
+            console.error("Error adding driver:", error);
         }
     });
 });
@@ -147,7 +147,7 @@ function bindRowClickEventsDriver() {
                 let driverContactNumber = resp.data.contactNum;
                 let driverAddress= resp.data.address;
                 document.getElementById('driverLicenceImg').src = baseURL + resp.data.drivingLicenseImg;
-                // $("#popUpDriverName").val(resp.data.name)
+               // $("#popUpDriverName").val(resp.data.name)
                 document.getElementById('popUpDriverName').innerHTML
                     = driverName;
 
@@ -163,8 +163,8 @@ function bindRowClickEventsDriver() {
                 document.getElementById('popUpDriverAddress').innerHTML
                     = driverAddress;
 
-                //  $("#popUpDriverNic").val(resp.data.nic);
-                //  $("#popUpDriverEmail").val(resp.data.email)
+              //  $("#popUpDriverNic").val(resp.data.nic);
+              //  $("#popUpDriverEmail").val(resp.data.email)
                 $("#popUpDriverContact").val(resp.data.contactNum)
                 $("#popUpDriverAddress").val(resp.data.address)
             }
@@ -202,7 +202,7 @@ $("#btnUpdateDriver").click(function () {
             document.getElementById('driverForm').reset();
         },
         error: function (error) {
-            console.error("Oops!Error updated driver..!", error);
+            console.error("Error adding driver:", error);
         }
     });
     loadAllDriver();
@@ -254,12 +254,12 @@ $("#btnAddHotel").click(function () {
         data: JSON.stringify(hotel),
         contentType: "application/json",
         success: function (response) {
-            alert("Hotel added successfully..!");
+            alert("Hotel added successfully:");
             loadAllHotel();
             document.getElementById('hotelForm').reset();
         },
         error: function (error) {
-            console.error("Oops!Error added Hotel..!", error);
+            console.error("Error adding Hotel:", error);
         }
     });
 
@@ -354,12 +354,12 @@ $("#btnUpdateHotel").click(function () {
         data: JSON.stringify(hotel),
         contentType: "application/json",
         success: function (response) {
-            alert("Hotel Updated successfully..!");
+            alert("Hotel Updated successfully:");
             loadAllHotel();
             document.getElementById('hotelForm').reset();
         },
         error: function (error) {
-            console.error("Oops!Error Updated Hotel.!", error);
+            console.error("Error Updaated Hotel:", error);
         }
     });
 
@@ -371,7 +371,7 @@ $("#btnDeleteHotel").click(function () {
         method: "DELETE",
         dataType: "json",
         success: function (resp) {
-            alert("Hotel Deleted successfully..!");
+            alert("Hotel Removed successfully");
             loadAllHotel();
             document.getElementById('hotelForm').reset();
         },
@@ -414,7 +414,7 @@ $("#btnAddTravel").click(function () {
             document.getElementById('travelForm').reset();
         },
         error: function (error) {
-            console.error("Oops!Error added Travel..!", error);
+            console.error("Error adding Travel:", error);
         }
     });
 })
@@ -509,12 +509,12 @@ $("#btnUpdateTravel").click(function () {
         data: JSON.stringify(travel),
         contentType: "application/json",
         success: function (response) {
-            alert("Travel Package Updated successfully..!");
+            alert("Travel Package Updated successfully:");
             loadAllPackages();
             document.getElementById('travelForm').reset();
         },
         error: function (error) {
-            console.error("Oops!Error Updated Travel..!", error);
+            console.error("Error Updated Travel:", error);
         }
     });
 })
@@ -523,7 +523,7 @@ $("#btnDeleteTravel").click(function () {
     $.ajax({
         url: baseURL + "packages/delete_package?id=" + packageId + "", method: "delete", success: function (resp) {
             loadAllPackages();
-            alert("Travel Package Deleted successfully..!");
+            alert("Travel Package Deleted successfully:");
             document.getElementById('travelForm').reset();
         }, error: function (error) {
             alert(JSON.parse(error.responseText).message);
@@ -560,12 +560,12 @@ $("#btnAddUser").click(function () {
         data: JSON.stringify(user),
         contentType: "application/json",
         success: function (response) {
-            alert("User Added Successfully..!");
+            alert("Travel User added successfully:");
             loadALLUser();
             document.getElementById('userForm').reset();
         },
         error: function (error) {
-            console.error("Oops!Error added User..!", error);
+            console.error("Error adding User:", error);
         }
     });
 
@@ -668,12 +668,12 @@ $("#btmUpdateUser").click(function () {
         data: JSON.stringify(user),
         contentType: "application/json",
         success: function (response) {
-            alert("User Updated successfully.!");
+            alert(" User added successfully:");
             loadALLUser();
             document.getElementById('userForm').reset();
         },
         error: function (error) {
-            console.error("OopsError Updated User..!", error);
+            console.error("Error adding User:", error);
         }
     });
 
@@ -683,7 +683,7 @@ $("#btnDeleteUser").click(function () {
     $.ajax({
         url: baseURL + "user/delete_user?id=" + UserId + "", method: "delete", success: function (resp) {
             loadALLUser();
-            alert("User Deleted successfully..!");
+            alert("User Deleted successfully:");
             loadALLUser();
             document.getElementById('userForm').reset();
         }, error: function (error) {
@@ -729,12 +729,12 @@ $("#btnSaveCar").click(function () {
         data: JSON.stringify(vehicle),
         contentType: "application/json",
         success: function (response) {
-            alert("Vehicle Added Successfully..!");
+            alert("Vehicle added successfully:");
             loadALLVehicle();
             document.getElementById('carForm').reset();
         },
         error: function (error) {
-            console.error("Oops!Error added vehicle..!", error);
+            console.error("Error adding vehicle:", error);
         }
     });
 
@@ -792,7 +792,7 @@ $("#btnUpdateCar").click(function () {
             document.getElementById('carForm').reset();
         },
         error: function (error) {
-            console.error("Oops!Error Updated Vehicle..!", error);
+            console.error("Error adding car:", error);
         }
     });
 
@@ -841,7 +841,7 @@ $("#btnDeleteCar").click(function (){
     $.ajax({
         url: baseURL + "vehicle/delete_vehicle?id=" + vehicleId + "", method: "delete", success: function (resp) {
             loadALLUser();
-            alert("Vehicle Deleted Successfully.!");
+            alert("Vehicle Deleted successfully:");
             loadALLVehicle();
             document.getElementById('carForm').reset();
         }, error: function (error) {
@@ -872,19 +872,19 @@ $("#btnAddGuide").click(function (){
         manDayPrice:manValue,
         status:GuideStatus,
     }
-    $.ajax({
-        method: "POST",
-        url:baseURL+"guide/add_guide",
-        data: guide,
-        dataType: "application/json",
-        success: function (response) {
-            loadAllGuide();
-            document.getElementById('guideForm').reset();
-        },
-        error: function (error) {
-            console.error("Oops!Error added Guide..!", error);
-        }
-    });
+       $.ajax({
+           method: "POST",
+           url:baseURL+"/guide/save_guide",
+           data: guide,
+           dataType: "application/json",
+           success: function (response) {
+               loadAllGuide();
+               document.getElementById('guideForm').reset();
+           },
+           error: function (error) {
+               console.error("Error adding Guide:", error);
+           }
+       });
 
 })
 
@@ -897,11 +897,11 @@ function loadAllGuide(){
                     'class="text-primary font-monospace" style="cursor: pointer">View</a></td></tr>';
                 $("#guideTable").append(row);
             }
-            guideBindRaw();
+          guideBindRaw();
         }
 
     });
-};
+}
 var guideId;
 function guideBindRaw(){
     $("#guideTable>tr").click(function () {
@@ -947,31 +947,30 @@ $("#btmUpdateGuide").click(function (){
         address:address,
         contactNumber:contactNumber,
         experience:experience,
-        manDayValue:manDayValue
+        manDayValue:manDayValue,
 
     }
-    console.log(guide);
     $.ajax({
-        method: "PUT", // You might need to adjust this depending on your server's API.
-        url: baseURL+"guide/update_guide",
-        data: guide,
+        method: "POST", // You might need to adjust this depending on your server's API.
+        url: baseURL+"guide/add_guide",
+        data: JSON.stringify(guide),
         dataType: "application/json",
         success: function (response) {
-            //loadAllGuide();
+            loadAllGuide();
             document.getElementById('guideForm').reset();
-            alert("Guide Updated successfully..!");
+            alert("Guide added successfully");
         },
         error: function (error) {
-            console.error("Oops!Error Updated Guide..!", error);
+            console.error("Error Updated Guide:", error);
         }
     });
 
 })
 $("#btnDeleteGuide").click(function (){
     $.ajax({
-        url: baseURL + "guide/del_guide?guideId=" + guideId + "", method: "delete", success: function (resp) {
+        url: baseURL + "guide/deleteGuide?id=" + guideId + "", method: "delete", success: function (resp) {
             loadAllGuide();
-            alert("Guide Deleted successfully..!");
+            alert("Guide Deleted successfully:");
 
             document.getElementById('guideForm').reset();
             loadAllGuide();
