@@ -536,8 +536,7 @@ $("#btnClearTravel").click(function (){
 /////// User
 
 loadALLUser();
-
-$("#btnAddUser").click(function () {
+function saveUser(){
     let name = $("#Full_name").val();
     let email = $("#email").val();
     let address = $("#address").val();
@@ -569,6 +568,9 @@ $("#btnAddUser").click(function () {
         }
     });
 
+}
+
+$("#btnAddUser").click(function () {
 
 })
 

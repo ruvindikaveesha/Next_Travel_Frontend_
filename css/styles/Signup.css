@@ -3,7 +3,7 @@ body, html {
     padding: 0;
     height: 100%;
     overflow: hidden;
-    color: #ffffff;
+    color: #111111;
     background-size:100%;
     background-image: url("../../assets/background img.jpg");
 }
