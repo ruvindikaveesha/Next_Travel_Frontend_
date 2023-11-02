@@ -4,7 +4,8 @@ body, html {
     height: 100%;
     overflow: hidden;
     color: #0a53be;
-    background-image:assets/palm-tree-background-7tcet35ndlroj3ir.jpg;
+    background-size:100%;
+    background-image: url("../../assets/background img.jpg");
 }
 
 .sidebar {
