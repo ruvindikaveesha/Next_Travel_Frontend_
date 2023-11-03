@@ -44,7 +44,7 @@ body, html {
 
 /* Add styles for the top navbar */
 .top-navbar {
-    background-color: #051c31;
+    background-color:#0b182f;
     width: 100vw;
     display: flex;
     justify-content: space-between;
@@ -79,5 +79,5 @@ body, html {
 }
 
 .logout-button button:hover {
-    background-color: #2980b9;
+    background-color:#161db4;
 }
