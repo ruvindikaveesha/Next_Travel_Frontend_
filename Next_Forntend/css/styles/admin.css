@@ -11,7 +11,7 @@ body, html {
 .sidebar {
     width: 200px;
     height: 100vh;
-    background-color: #333;
+    background-color: #0f1842;
     position: fixed;
     top: 0;
     left: 0;
@@ -26,9 +26,9 @@ body, html {
     padding: 10px 20px;
     cursor: pointer;
     outline: none;
-    font-size: 16px;
+    font-size:22px;
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     font-family: "Britannic Bold";
     text-shadow: -3px 2px 4px #000000;
 }
@@ -69,15 +69,15 @@ body, html {
 }
 
 .logout-button button {
-    background-color: #3498db;
+    background-color: #121eb4;
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 10px 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .logout-button button:hover {
-    background-color:#161db4;
+    background-color: #284bd3;
 }
