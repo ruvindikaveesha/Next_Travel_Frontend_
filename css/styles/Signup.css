@@ -1,9 +1,0 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow: hidden;
-    color: #111111;
-    background-size:100%;
-    background-image: url("../../assets/background img.jpg");
-}
